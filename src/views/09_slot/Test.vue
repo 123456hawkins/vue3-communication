@@ -1,15 +1,19 @@
 <template>
   <div class="box">
+    <hr>
     <h1>我是子组件默认插槽</h1>
     <!-- 默认插槽 -->
     <slot></slot>
     <h1>我是子组件默认插槽</h1>
+    <hr>
     <h1>具名插槽填充数据</h1>
     <slot name="a"></slot>
     <h1>具名插槽填充数据</h1>
+    <hr>
     <h1>具名插槽填充数据</h1>
     <slot name="b"></slot>
     <h1>具名插槽填充数据</h1>
+    <hr>
   </div>
 </template>
 

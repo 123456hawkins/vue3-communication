@@ -1,9 +1,14 @@
 <template>
   <div class="box">
     <h1>作用域插槽</h1>
+    <!-- <ul> -->
+    <!-- <li v-for="(item, index) in todos" :key="item.id"> -->
+    <!--作用域插槽:可以讲数据回传给父组件，作用域插槽的写法-->
+    <!-- <slot :$row="item" :$index="index"></slot> -->
+    <!-- </li> -->
+    <!-- </ul> -->
     <ul>
-      <li v-for="(item, index) in todos" :key="item.id">
-        <!--作用域插槽:可以讲数据回传给父组件-->
+      <li v-for="(item, index) in todos" :key="index">
         <slot :$row="item" :$index="index"></slot>
       </li>
     </ul>
@@ -12,7 +17,7 @@
 
 <script setup lang="ts">
 //通过props接受父组件传递数据
-defineProps(["todos"]);
+defineProps(['todos'])
 </script>
 
 <style scoped>
